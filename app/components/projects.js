@@ -81,7 +81,7 @@ export default function Projects() {
   ];
 
   return (
-    <div className="relative z-5 flex flex-col justify-center mt-110">
+    <div className="relative z-5 flex flex-col justify-center mt-20">
       <div className="max-w-220 mx-auto px-6 flex flex-col items-center">
         <div className="w-40 cursor-default relative overflow-hidden h-full">
           <LogoLoop
