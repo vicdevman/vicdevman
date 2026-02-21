@@ -15,13 +15,13 @@ export default function About() {
           building websites that feel effortless to use.
         </p>{" "}
         <div className="group p-2 mt-18 flex justify-center absolute left-1/2 -translate-x-1/2 cursor-pointer">
-          <div className="absolute -right-8 w-50 flex flex-col gap-2 bg-white rounded-xl shadow-[0_8px_20px_0_rgba(0,0,0,0.2)] p-1.5 rotate-350 transition duration-300 group-hover:-translate-x-8 group-hover:-translate-y-4 group-hover:rotate-345">
+          <div className="absolute -right-8 w-48 flex flex-col gap-2 bg-white rounded-xl shadow-[0_8px_20px_0_rgba(0,0,0,0.2)] p-1.5 rotate-350 transition duration-300 group-hover:-translate-x-8 group-hover:-translate-y-4 group-hover:rotate-345">
             <Image
               src="/victor.jpeg"
               alt="victor"
               width={400}
               height={500}
-              className="rounded-lg h-50 object-cover object-top"
+              className="rounded-lg h-48 object-cover object-top"
             />
 
             <p className="text-center -mt-1 font-[satoshi-light-italic] text-md tracking-tight">
@@ -29,13 +29,13 @@ export default function About() {
             </p>
           </div>
 
-             <div className="absolute z-2 -top-6 -left-8 w-50 flex flex-col gap-2 bg-white rounded-xl shadow-[0_8px_30px_0_rgba(0,0,0,0.3)] p-1.5 rotate-12 transition duration-300 group-hover:translate-x-8 group-hover:-translate-y-4 group-hover:rotate-17">
+             <div className="absolute z-2 -top-6 -left-8 w-48 flex flex-col gap-2 bg-white rounded-xl shadow-[0_8px_30px_0_rgba(0,0,0,0.3)] p-1.5 rotate-12 transition duration-300 group-hover:translate-x-8 group-hover:-translate-y-4 group-hover:rotate-17">
             <Image
               src="/vicdevman.webp"
               alt="vicdevman avartar"
               width={400}
               height={500}
-              className="rounded-lg  h-50 object-cover"
+              className="rounded-lg h-48 object-cover"
             />
 
             <p className="text-center -mt-1 font-[satoshi-light-italic] text-md tracking-tight">
