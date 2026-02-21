@@ -111,7 +111,7 @@ rounded-3xl p-8"></div> */}
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"
-          viewport={{ once: true, amount: 0.2, delay: 0.5 }}
+          viewport={{ once: true, amount: 0.2, delay: 0.2 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-[1rem] mb-2 leading-tight text-neutral-500 font-[satoshi-medium] max-w-lg tracking"
         >
@@ -124,7 +124,7 @@ rounded-3xl p-8"></div> */}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           className="flex items-center gap-4 flex-wrap"
         >
           <button className="group whitespace-nowrap flex gap-2 items-center bg-[#191919] tracking-tight text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition-colors duration-300">
