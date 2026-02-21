@@ -68,7 +68,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-6 flex flex-col gap-4 min-full"
+      className="mt-6 flex flex-col gap-4 max-sm:gap-2 min-full"
     >
       <AnimatePresence mode="wait">
         {submitStatus.type && (
@@ -86,13 +86,13 @@ export default function ContactForm() {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="flex gap-4">
+      <div className="flex gap-4 max-sm:gap-2">
         <Input
           name="name"
           value={formData.name}
           onChange={handleChange}
           placeholder="Enter your Name"
-          className="border border-neutral-200 bg-neutral-100 h-12 placeholder:text-neutral-400 p-4 font-[satoshi-medium] rounded-xl"
+          className="border border-neutral-200 bg-neutral-100/60 h-12 placeholder:text-neutral-400 p-4 font-[satoshi-medium] rounded-xl"
           required
           disabled={isSubmitting}
         />
@@ -102,7 +102,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           placeholder="Enter your Email"
-          className="border border-neutral-200 font-[satoshi-medium] placeholder:text-neutral-400 p-4 bg-neutral-100 h-12 rounded-xl"
+          className="border border-neutral-200 font-[satoshi-medium] placeholder:text-neutral-400 p-4 bg-neutral-100/60 h-12 rounded-xl"
           required
           disabled={isSubmitting}
         />
@@ -112,7 +112,7 @@ export default function ContactForm() {
         value={formData.message}
         onChange={handleChange}
         placeholder="Write your Message"
-        className="border border-neutral-200 font-[satoshi-medium] placeholder:text-neutral-400 p-4 bg-neutral-100 h-30 rounded-xl"
+        className="border border-neutral-200 font-[satoshi-medium] placeholder:text-neutral-400 p-4 bg-neutral-100/60 h-30 rounded-xl"
         required
         disabled={isSubmitting}
       />
