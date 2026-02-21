@@ -130,7 +130,7 @@ export default function Skills() {
         <h1 className="text-3xl max-sm:text-2xl text-center font-[satoshi-bold] mb-1 tracking-tight">
           How Can I Help?
         </h1>
-        <p className="text-lg max-sm:text-[1.05rem] text-center text-neutral-500 font-[satoshi-medium] tracking-tight">
+        <p className="text-lg max-sm:text-[1.05rem] text-center text-neutral-500 font-[satoshi-medium] tracking">
           Let’s turn your vision into something amazing.
         </p>
 

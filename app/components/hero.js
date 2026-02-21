@@ -85,7 +85,7 @@ rounded-3xl p-8"></div> */}
             direction="bottom"
           />
         </h1>
-        <p className="text-[1.05rem] mb-2 leading-tight text-neutral-500 font-[satoshi-medium] max-w-lg tracking-tight">
+        <p className="text-[1.05rem] mb-2 leading-tight text-neutral-500 font-[satoshi-medium] max-w-lg tracking">
           Crafting seamless experiences and bold visuals. High school student by
           day, creative thinker, and aspiring innovator by night.
         </p>

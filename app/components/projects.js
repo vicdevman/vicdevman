@@ -156,7 +156,7 @@ export default function Projects() {
                 <h1 className="text-[1.35rem] font-[satoshi-bold] mb-2 tracking-tighter ml-2 ">
                   {project.title}
                 </h1>
-                <p className="text-[1.05rem] line-clamp-2 mb-2 leading-tight text-neutral-500/95 font-[satoshi-medium] max-w-sm tracking-tight ml-2 -mt-2">
+                <p className="text-[1.05rem] line-clamp-2 mb-2 leading-tight text-neutral-500/95 font-[satoshi-medium] max-w-sm tracking ml-2 -mt-2">
                   {project.longDescription}
                 </p>
 
