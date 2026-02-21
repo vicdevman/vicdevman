@@ -1,7 +1,12 @@
+'use client';
+
 import { ChevronRight } from "lucide-react";
 import { House, Twitter, Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+
 
 export default function Header() {
   const header = [
@@ -14,8 +19,20 @@ export default function Header() {
     },
   ];
 
+  const fadeInDown = {
+  initial: { opacity: 0, y: -80 },
+  animate: { opacity: 1, y: 0 },
+};
+
+
   return (
-    <div className="border border-neutral-200/90 shadow-[inset_0_2px_4px_rgba(250,250,250),_inset_0_-2px_4px_rgba(255,255,255)] bg-white/20 backdrop-blur-lg p-1 px-1.5 rounded-3xl fixed left-1/2 z-100 transform -translate-x-1/2 top-8 flex items-center gap-1">
+    <motion.div
+          id="about"
+          variants={fadeInDown}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2}}
+          transition={{ duration: 0.5, ease: "easeOut" }} className="border border-neutral-200/90 shadow-[inset_0_2px_4px_rgba(250,250,250),_inset_0_-2px_4px_rgba(255,255,255)] bg-white/20 backdrop-blur-lg p-1 px-1.5 rounded-3xl fixed left-1/2 z-100 transform -translate-x-1/2 top-8 flex items-center gap-1">
       <Link
         href="/"
         className="group flex items-center text-neutral-900 gap-2 px-5 py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors rounded-2xl"
@@ -103,6 +120,6 @@ export default function Header() {
       <button className="bg-[#191919] hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] shadow text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition">
         Resume
       </button>
-    </div>
+    </motion.div>
   );
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import BlurText from "../../components/BlurText";
 import LogoLoop from "../../components/LogoLoop";
@@ -6,6 +8,7 @@ import { Flower } from "lucide-react";
 import { Phone } from "lucide-react";
 import { Laptop } from "lucide-react";
 import { ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 function ImageCard({ src, alt = "alt thing", href = "#" }) {
   return (
@@ -49,6 +52,16 @@ const techLogos = [
 ];
 
 export default function Hero() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+  };
+
+  const fadeInDown = {
+    initial: { opacity: 0, y: -30 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="flex flex-col mt-40 mb-60">
       {/* <div class="fixed top-0 left-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
@@ -59,7 +72,15 @@ shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]
 rounded-3xl p-8"></div> */}
 
       <div className=" max-w-3xl mx-auto flex flex-col gap-4 px-6 items-start">
-        <div className="w-26 h-26 overflow-hidden rounded-full">
+        <motion.div
+          id="about"
+          variants={fadeInDown}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2}}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="w-26 h-26 overflow-hidden rounded-full"
+        >
           <Image
             src="/vic.jpeg"
             alt="vicdevman"
@@ -67,7 +88,7 @@ rounded-3xl p-8"></div> */}
             width={1200}
             height={600}
           />
-        </div>
+        </motion.div>
 
         <h1 className="max-sm:text-[1.8rem] text-[2.4rem] leading-tight tracking-tight font-[satoshi-bold]">
           <BlurText
@@ -85,11 +106,27 @@ rounded-3xl p-8"></div> */}
             direction="bottom"
           />
         </h1>
-        <p className="text-[1rem] mb-2 leading-tight text-neutral-500 font-[satoshi-medium] max-w-lg tracking">
+        <motion.div
+          id="about"
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2, delay: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="text-[1rem] mb-2 leading-tight text-neutral-500 font-[satoshi-medium] max-w-lg tracking"
+        >
           Crafting seamless experiences and bold visuals. High school student by
           day, creative thinker, and aspiring innovator by night.
-        </p>
-        <div className="flex items-center gap-4 flex-wrap">
+        </motion.div>
+        <motion.div
+          id="about"
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+          className="flex items-center gap-4 flex-wrap"
+        >
           <button className="group whitespace-nowrap flex gap-2 items-center bg-[#191919] tracking-tight text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition-colors duration-300">
             View my Work
             <span className="flex items-center overflow-hidden w-0 group-hover:w-5 transition-all duration-300 ease-out">
@@ -102,7 +139,7 @@ rounded-3xl p-8"></div> */}
             <div className="w-2.5 h-2.5 bg-[#178d00] rounded-full mr-1 "></div>
             Available for new projects
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="w-full relative z-10 overflow-hidden left-0 top-80 -mt-70 h-full">
         <LogoLoop
