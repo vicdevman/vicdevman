@@ -69,7 +69,7 @@ rounded-3xl p-8"></div> */}
           />
         </div>
 
-        <h1 className="max-sm:text-[1.6rem] text-[2.4rem] leading-tight tracking-normal font-[satoshi-bold]">
+        <h1 className="max-sm:text-[1.8rem] text-[2.4rem] leading-tight tracking-tight font-[satoshi-bold]">
           <BlurText
             text="Hey, I'm Victor Adeiza."
             delay={0}
