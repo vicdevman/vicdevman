@@ -38,7 +38,7 @@ export default function About() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2, delay: 0.5}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="group p-2 mt-18 flex justify-center absolute left-1/2 -translate-x-1/2 cursor-pointer"
         >
           <div className="absolute -right-8 w-48 flex flex-col gap-2 bg-white rounded-xl shadow-[0_8px_20px_0_rgba(0,0,0,0.2)] p-1.5 rotate-350 transition duration-300 group-hover:-translate-x-8 group-hover:-translate-y-4 group-hover:rotate-345">
