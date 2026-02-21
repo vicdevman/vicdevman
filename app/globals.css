@@ -44,6 +44,7 @@ body {
   background: #ffffff;
   color: #0a0a0a;
   font-family: satoshi-normal;
+  overflow-x: hidden;
 }
 
 @theme inline {

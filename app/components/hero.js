@@ -5,6 +5,7 @@ import { Home } from "lucide-react";
 import { Flower } from "lucide-react";
 import { Phone } from "lucide-react";
 import { Laptop } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 function ImageCard({ src, alt = "alt thing", href = "#" }) {
   return (
@@ -49,7 +50,7 @@ const techLogos = [
 
 export default function Hero() {
   return (
-    <div className="flex flex-col mt-46 mb-60">
+    <div className="flex flex-col mt-40 mb-60">
       {/* <div class="fixed top-0 left-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
 <div class="fixed top-0 right-0 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div> */}
 
@@ -58,7 +59,7 @@ shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]
 rounded-3xl p-8"></div> */}
 
       <div className=" max-w-3xl mx-auto flex flex-col gap-5 px-6 items-start">
-        <div className="w-22 h-22 overflow-hidden rounded-full">
+        <div className="w-26 h-26 overflow-hidden rounded-full">
           <Image
             src="/vic.jpeg"
             alt="vicdevman"
@@ -89,10 +90,15 @@ rounded-3xl p-8"></div> */}
           day, creative thinker, and aspiring innovator by night.
         </p>
         <div className="flex items-center gap-4 flex-wrap">
-          <button className="whitespace-nowrap bg-[#191919] tracking-tight text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition-colors">
-            View my Work
-          </button>
+   <button className="group whitespace-nowrap flex gap-2 items-center bg-[#191919] tracking-tight text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition-colors duration-300">
+  View my Work
 
+  <span className="flex items-center overflow-hidden w-0 group-hover:w-5 transition-all duration-300 ease-out">
+    <span className="translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out">
+      <ChevronRight size={18} />
+    </span>
+  </span>
+</button>
           <div className="text-[#178d00] whitespace-nowrap bg-[#178d00]/15 text-md tracking-tighter font-[satoshi-bold-italic] px-6 py-2.5 rounded-full flex items-center gap-2">
             <div className="w-2.5 h-2.5 bg-[#178d00] rounded-full mr-1 "></div>  
             Available for new projects

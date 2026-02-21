@@ -35,12 +35,12 @@ export default function Work() {
                 {experience.duration}
               </p>
 
-              <div className="-mt-1 flex gap-2 items-center justify-start flex-1">
+              <div className="-mt-1 flex gap-2 items-center flex-wrap justify-start flex-1">
                 <h1 className="text-[1.1rem] whitespace-nowrap font-[satoshi-medium] text-neutral-500 mb-2 tracking-tight">
                   {experience.title} at
                 </h1>
 
-                <div className="flex cursor-pointer items-center whitespace-nowrap  text-[1rem] font-[satoshi-bold] p-1.5 px-3 border tracking-tight bg-blue-100 border-blue-200 text-blue-500 rounded-xl">
+                <div className="-mt-1 flex cursor-pointer items-center whitespace-nowrap  text-[1rem] font-[satoshi-bold] p-1.5 px-3 border tracking-tight bg-blue-100 border-blue-200 text-blue-500 rounded-xl">
                   {experience.company}
                 </div>
               </div>

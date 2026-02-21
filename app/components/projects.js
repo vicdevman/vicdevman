@@ -3,7 +3,7 @@ import LogoLoop from "@/components/LogoLoop";
 import Image from "next/image";
 import { Flower } from "lucide-react";
 import { Phone } from "lucide-react";
-import { Laptop, ChevronRight  } from "lucide-react";
+import { Laptop, ChevronRight } from "lucide-react";
 
 const projects = [
   {
@@ -61,20 +61,58 @@ const projects = [
   },
 ];
 
+const SvgTemplate = ({ image }) => {
+  return (
+    <Image
+      src={image}
+      alt="Project Image"
+      width={200}
+      height={200}
+      className="w-7 h-7 fill-neutral-200"
+    />
+  );
+};
+
 export default function Projects() {
   const techLogos = [
     {
-      node: <Flower />,
+      node: <SvgTemplate image="/icon/html-124-svgrepo-com.svg" />,
       title: "Next.js",
       href: "https://nextjs.org",
     },
     {
-      node: <Phone />,
+      node: <SvgTemplate image="/icon/flutter-svgrepo-com.svg" />,
+      title: "Tailwind CSS",
+      href: "https://tailwindcss.com",
+    },
+    {
+      node: <SvgTemplate image="/icon/nextjs-svgrepo-com.svg" />,
+      title: "Tailwind CSS",
+      href: "https://tailwindcss.com",
+    },
+    {
+      node: <SvgTemplate image="/icon/typescript-svgrepo-com.svg" />,
       title: "TypeScript",
       href: "https://www.typescriptlang.org",
     },
     {
-      node: <Laptop />,
+      node: <SvgTemplate image="/icon/java-svgrepo-com.svg" />,
+      title: "Tailwind CSS",
+      href: "https://tailwindcss.com",
+    },
+
+    {
+      node: <SvgTemplate image="/icon/python-127-svgrepo-com.svg" />,
+      title: "Tailwind CSS",
+      href: "https://tailwindcss.com",
+    },
+    {
+      node: <SvgTemplate image="/icon/javascript-svgrepo-com.svg" />,
+      title: "Tailwind CSS",
+      href: "https://tailwindcss.com",
+    },
+    {
+      node: <SvgTemplate image="/icon/nodejs02-svgrepo-com.svg" />,
       title: "Tailwind CSS",
       href: "https://tailwindcss.com",
     },
@@ -83,23 +121,23 @@ export default function Projects() {
   return (
     <div className="relative z-5 flex flex-col justify-center mt-20">
       <div className="max-w-220 mx-auto px-6 flex flex-col items-center">
-        <div className="w-40 cursor-default relative overflow-hidden h-full">
+        <div className="w-42 cursor-default relative overflow-hidden h-full">
           <LogoLoop
             logos={techLogos}
             containerHeight={80}
-            speed={40}
+            speed={20}
             direction="left"
-            itemWidth={80}
+            itemWidth={82}
             itemHeight={80}
             objectFit="cover"
-            //   aspectRatio="16/9"
-            gap={-40}
+            //aspectRatio="16/9"
+            gap={-46}
             fadeOut
             pauseOnHover={false}
           />
         </div>
 
-        <h1 className="text-3xl font-[satoshi-bold] tracking-tight -mt-2 mb-2 relative z-20">
+        <h1 className="text-3xl max-sm:text-xl font-[satoshi-bold] tracking-tight -mt-2 mb-2 relative z-20">
           Here’s What I’ve Been Up To.
         </h1>
 
@@ -118,11 +156,11 @@ export default function Projects() {
                 <h1 className="text-[1.35rem] font-[satoshi-bold] mb-2 tracking-tighter ml-2 ">
                   {project.title}
                 </h1>
-                <p className="text-[1.05rem] line-clamp-2 mb-2 leading-tight text-neutral-500/95 font-[satoshi-medium] max-w-lg tracking-tight ml-2 -mt-2">
+                <p className="text-[1.05rem] line-clamp-2 mb-2 leading-tight text-neutral-500/95 font-[satoshi-medium] max-w-sm tracking-tight ml-2 -mt-2">
                   {project.longDescription}
                 </p>
 
-                <button className="whitespace-nowrap bg-neutral-100 px-5 py-3 text-md cursor-pointer rounded-xl font-[satoshi-medium] flex justify-between w-40 transition hover:scale-x-105 hover:bg-neutral-200 origin-left items-center">
+                <button className="whitespace-nowrap bg-neutral-100 px-5 py-3 text-md cursor-pointer rounded-xl font-[satoshi-medium] flex justify-between w-40 transition hover:scale-x-108 hover:bg-neutral-200/80 origin-left items-center">
                   View Project
                   <ChevronRight size={18} />
                 </button>

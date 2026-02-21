@@ -126,7 +126,7 @@ const portfolioSections = [
 export default function Skills() {
   return (
     <div className=" flex flex-col mt-110">
-      <div className=" max-w-3xl mx-auto px-6">
+      <div className=" max-w-2xl mx-auto px-6">
         <h1 className="text-3xl text-center font-[satoshi-bold] mb-2 tracking-tight">
           How Can I Help?
         </h1>
@@ -134,12 +134,12 @@ export default function Skills() {
           Let’s turn your vision into something amazing.
         </p>
 
-        <div className="grid grid-cols-2 max-md:grid-cols-1 w-full gap-4 mt-8">
+        <div className="grid grid-cols-2 w-full gap-2 mt-8">
           {portfolioSections &&
             portfolioSections.map((section) => (
               <div
                 key={section.id}
-                className="w-full rounded-xl relative bg-neutral-100/80 p-4 flex items-start justify-center border border-neutral-200/40 shadow-[inset_0_2px_4px_rgba(255,2550,255),_inset_0_-2px_4px_rgba(255,255,255)]"
+                className="w-full rounded-xl relative bg-neutral-100/80 p-4 flex items-start  border border-neutral-200/40 shadow-[inset_0_2px_4px_rgba(255,2550,255),_inset_0_-2px_4px_rgba(255,255,255)]"
               >
                 {/* <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 left-4"></div>
             <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 right-2"></div>
@@ -149,16 +149,16 @@ export default function Skills() {
                   <div style={{ height: "140px", position: "relative", marginTop: '-30px' }}>
                     <GlassIcons
                       items={section.items}
-                      className=""
+                       colorful={false}
                       
                     />
                   </div>
-                  <h1 className="text-[1.2rem] font-[satoshi-bold]  tracking-tight">
+                  <h1 className="text-[1rem] font-[satoshi-bold] tracking-tight">
                     {section.title}
                   </h1>
-                  <p className="text-[1rem] text-neutral-400 font-[satoshi-medium] tracking-tight">
+                  {/* <p className="text-[1rem] text-neutral-400 font-[satoshi-normal] tracking-tight">
                     {section.positioning}
-                  </p>
+                  </p> */}
                   {/* <div className="flex flex-wrap gap-2 mt-3">
                   {section.techstack.map((tech, index) => (
                     <div key={index} className="text-xs font-[satoshi-medium] p-1.5 px-3 border tracking-tight bg-neutral-200 border-neutral-300/60 text-neutral-500 rounded-xl">

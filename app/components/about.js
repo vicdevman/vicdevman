@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className=" flex flex-col mt-110">
+    <div className=" flex flex-col mt-100 overflow-hidden">
       <div className=" max-w-3xl mx-auto px-6">
         <h1 className="text-2xl font-[satoshi-bold] mb-2 tracking-tight">About</h1>
         <p className="text-[1.05rem] mb-2 leading-tight text-neutral-500/95 font-[satoshi-medium] max-w-lg tracking-tight">
