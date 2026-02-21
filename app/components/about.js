@@ -6,7 +6,7 @@ export default function About() {
     <div className=" flex flex-col mt-100 overflow-hidden">
       <div className=" max-w-3xl mx-auto px-6">
         <h1 className="text-2xl font-[satoshi-bold] mb-2 tracking-tight">About</h1>
-        <p className="text-[1.05rem] mb-2 leading-tight text-neutral-500/95 font-[satoshi-medium] max-w-lg tracking">
+        <p className="text-[1rem] mb-2 leading-tight text-neutral-500/95 font-[satoshi-medium] max-w-lg tracking">
           I’m Mia Carter, a curious designer, coder, and storyteller. Currently
           a student at Springfield High School, but always exploring the
           limitless possibilities of creativity and technology.

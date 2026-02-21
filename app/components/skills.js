@@ -130,7 +130,7 @@ export default function Skills() {
         <h1 className="text-3xl max-sm:text-2xl text-center font-[satoshi-bold] mb-1 tracking-tight">
           How Can I Help?
         </h1>
-        <p className="text-lg max-sm:text-[1.05rem] text-center text-neutral-500 font-[satoshi-medium] tracking">
+        <p className="text-lg max-sm:text-[1rem] text-center text-neutral-500 font-[satoshi-medium] tracking">
           Let’s turn your vision into something amazing.
         </p>
 
@@ -146,14 +146,14 @@ export default function Skills() {
             <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 bottom-3.5 right-2"></div>
             <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 bottom-3.5 left-4"></div> */}
                 <div className="flex flex-col justify-between gap-2">
-                  <div style={{ height: "140px", position: "relative", marginTop: '-30px' }}>
+                  <div style={{ height: "140px", position: "relative", marginTop: '-34px' }}>
                     <GlassIcons
                       items={section.items}
                        colorful={false}
                       
                     />
                   </div>
-                  <h1 className="text-[1rem] font-[satoshi-bold] tracking-tight">
+                  <h1 className="text-[1rem] max-sm:text-[0.9rem] font-[satoshi-bold] tracking-tight">
                     {section.title}
                   </h1>
                   {/* <p className="text-[1rem] text-neutral-400 font-[satoshi-normal] tracking-tight">

@@ -85,7 +85,7 @@ rounded-3xl p-8"></div> */}
             direction="bottom"
           />
         </h1>
-        <p className="text-[1.05rem] mb-2 leading-tight text-neutral-500 font-[satoshi-medium] max-w-lg tracking">
+        <p className="text-[1rem] mb-2 leading-tight text-neutral-500 font-[satoshi-medium] max-w-lg tracking">
           Crafting seamless experiences and bold visuals. High school student by
           day, creative thinker, and aspiring innovator by night.
         </p>
@@ -94,7 +94,7 @@ rounded-3xl p-8"></div> */}
   View my Work
 
   <span className="flex items-center overflow-hidden w-0 group-hover:w-5 transition-all duration-300 ease-out">
-    <span className="translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 ease-out">
+    <span className="translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-active:translate-y-0 group-active:opacity-100 transition-all duration-300 ease-out">
       <ChevronRight size={18} />
     </span>
   </span>
