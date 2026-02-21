@@ -127,10 +127,10 @@ export default function Skills() {
   return (
     <div className=" flex flex-col mt-110">
       <div className=" max-w-2xl mx-auto px-6">
-        <h1 className="text-3xl text-center font-[satoshi-bold] mb-2 tracking-tight">
+        <h1 className="text-3xl max-sm:text-2xl text-center font-[satoshi-bold] mb-1 tracking-tight">
           How Can I Help?
         </h1>
-        <p className="text-lg text-center text-neutral-500 font-[satoshi-medium] tracking-tight">
+        <p className="text-lg max-sm:text-[1.05rem] text-center text-neutral-500 font-[satoshi-medium] tracking-tight">
           Let’s turn your vision into something amazing.
         </p>
 

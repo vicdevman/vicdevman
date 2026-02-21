@@ -137,7 +137,7 @@ export default function Projects() {
           />
         </div>
 
-        <h1 className="text-3xl max-sm:text-xl font-[satoshi-bold] tracking-tight -mt-2 mb-2 relative z-20">
+        <h1 className="text-3xl max-sm:text-2xl font-[satoshi-bold] tracking-tight -mt-2 mb-2 relative z-20">
           Here’s What I’ve Been Up To.
         </h1>
 

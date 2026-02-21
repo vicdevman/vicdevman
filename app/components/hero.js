@@ -58,7 +58,7 @@ export default function Hero() {
 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] 
 rounded-3xl p-8"></div> */}
 
-      <div className=" max-w-3xl mx-auto flex flex-col gap-5 px-6 items-start">
+      <div className=" max-w-3xl mx-auto flex flex-col gap-4 px-6 items-start">
         <div className="w-26 h-26 overflow-hidden rounded-full">
           <Image
             src="/vic.jpeg"
@@ -69,7 +69,7 @@ rounded-3xl p-8"></div> */}
           />
         </div>
 
-        <h1 className="font-extrabold max-sm:text-[1.6rem] text-[2.4rem] leading-tight tracking-normal font-[satoshi-medium]">
+        <h1 className="max-sm:text-[1.6rem] text-[2.4rem] leading-tight tracking-normal font-[satoshi-black]">
           <BlurText
             text="Hey, I'm Victor Adeiza."
             delay={0}
@@ -105,7 +105,7 @@ rounded-3xl p-8"></div> */}
           </div>
         </div>
       </div>
-      <div className="w-full relative z-10 overflow-hidden left-0 top-85 -mt-70 h-full">
+      <div className="w-full relative z-10 overflow-hidden left-0 top-80 -mt-70 h-full">
         <LogoLoop
           logos={techLogos}
           containerHeight={400}
