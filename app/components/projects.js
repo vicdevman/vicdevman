@@ -4,62 +4,9 @@ import Image from "next/image";
 import { Flower } from "lucide-react";
 import { Phone } from "lucide-react";
 import { Laptop, ChevronRight } from "lucide-react";
+import Link from "next/link";
+import { projects } from "../data/projects.data";
 
-const projects = [
-  {
-    id: "ticky",
-    title: "Ticky",
-    image: "/project-image/ticky-game.png",
-    description: "Multiplayer Tic-Tac-Toe game with real-time updates",
-    longDescription:
-      "Ticky is a multiplayer Tic-Tac-Toe game with real-time updates. It features a responsive and intuitive interface, smooth animations, and a leaderboard to track player performance. The game is built using React, Node.js, and TypeScript, with a focus on performance and accessibility. It includes features like player authentication, game history, and a leaderboard to track player performance.",
-    techStack: [
-      "React",
-      "Node.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "MongoDB",
-      "Vercel",
-    ],
-    link: "https://ticky-eta.vercel.app/",
-    githubLink: "https://github.com/vicdevman/ticky",
-    demoLink: "https://ticky-eta.vercel.app/",
-    category: ["Web App", "Gaming", "Realtime", "Multiplayer"],
-    featured: true,
-    completionDate: "2024-06",
-    role: "Full Stack Developer",
-  },
-  {
-    id: "walletscan",
-    title: "Wallet Scan",
-    image: "/project-image/wallet-scan.png",
-    description: "Real-time Proof of Funds PDF Generator",
-    longDescription:
-      "WalletScan is a comprehensive cryptocurrency portfolio management application that allows users to track their investments across multiple exchanges and wallets. It features real-time price updates, customizable alerts, detailed analytics, and historical performance tracking. The application integrates with major cryptocurrency exchanges via APIs and supports over 5000 cryptocurrencies.",
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Graphql",
-      "Stripe(Test Mode)",
-      "Appkit",
-      "Wagmi",
-      "Viem",
-      "Web3/@Solana",
-      "Helius API",
-      "Zapper API",
-      "CoinGecko API",
-    ],
-    link: "https://walletscan-staging.vercel.app",
-    githubLink: "https://github.com/vicdevman/proof-of-funds-mvp",
-    demoLink: "https://walletscan-staging.vercel.app",
-    category: ["Web3", "DeFi", "Finance", "Blockchain"],
-    featured: true,
-    completionDate: "2023-11",
-    role: "Lead Developer",
-  },
-];
 
 const SvgTemplate = ({ image }) => {
   return (
@@ -73,7 +20,7 @@ const SvgTemplate = ({ image }) => {
   );
 };
 
-export default function Projects() {
+export default function Projects({show = true}) {
   const techLogos = [
     {
       node: <SvgTemplate image="/icon/html-124-svgrepo-com.svg" />,
@@ -160,12 +107,25 @@ export default function Projects() {
                   {project.longDescription}
                 </p>
 
-                <button className="whitespace-nowrap bg-neutral-100 px-5 py-3 text-md cursor-pointer rounded-xl font-[satoshi-medium] flex justify-between w-40 transition hover:scale-x-108 hover:bg-neutral-200/80 origin-left items-center">
+                <Link href={`/projects/${project.id}`} className="whitespace-nowrap bg-neutral-100 px-5 py-3 text-md cursor-pointer rounded-xl font-[satoshi-medium] flex justify-between w-40 transition hover:scale-x-108 hover:bg-neutral-200/80 origin-left items-center">
                   View Project
                   <ChevronRight size={18} />
-                </button>
+                </Link>
               </div>
             ))}
+        </div>
+        <div className={`${show ? 'block' : 'hidden'} mt-10`}>
+          <Link
+            href="/projects"
+            className="group whitespace-nowrap flex gap-2 items-center bg-[#191919] tracking-tight text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition-colors duration-300"
+          >
+            View All
+            <span className="flex items-center overflow-hidden w-0 group-hover:w-5 transition-all duration-300 ease-out">
+              <span className="translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-active:translate-y-0 group-active:opacity-100 transition-all duration-300 ease-out">
+                <ChevronRight size={18} />
+              </span>
+            </span>
+          </Link>
         </div>
       </div>
       {/* <div className="w-full h-px bg-neutral-200/90 "></div> */}

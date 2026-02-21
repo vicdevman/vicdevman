@@ -90,17 +90,16 @@ rounded-3xl p-8"></div> */}
           day, creative thinker, and aspiring innovator by night.
         </p>
         <div className="flex items-center gap-4 flex-wrap">
-   <button className="group whitespace-nowrap flex gap-2 items-center bg-[#191919] tracking-tight text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition-colors duration-300">
-  View my Work
-
-  <span className="flex items-center overflow-hidden w-0 group-hover:w-5 transition-all duration-300 ease-out">
-    <span className="translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-active:translate-y-0 group-active:opacity-100 transition-all duration-300 ease-out">
-      <ChevronRight size={18} />
-    </span>
-  </span>
-</button>
+          <button className="group whitespace-nowrap flex gap-2 items-center bg-[#191919] tracking-tight text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition-colors duration-300">
+            View my Work
+            <span className="flex items-center overflow-hidden w-0 group-hover:w-5 transition-all duration-300 ease-out">
+              <span className="translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-active:translate-y-0 group-active:opacity-100 transition-all duration-300 ease-out">
+                <ChevronRight size={18} />
+              </span>
+            </span>
+          </button>
           <div className="text-[#178d00] whitespace-nowrap bg-[#178d00]/15 text-md tracking-tighter font-[satoshi-bold-italic] px-6 py-2.5 rounded-full flex items-center gap-2">
-            <div className="w-2.5 h-2.5 bg-[#178d00] rounded-full mr-1 "></div>  
+            <div className="w-2.5 h-2.5 bg-[#178d00] rounded-full mr-1 "></div>
             Available for new projects
           </div>
         </div>
