@@ -115,8 +115,7 @@ rounded-3xl p-8"></div> */}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-[1rem] mb-2 leading-tight text-neutral-500 font-[satoshi-medium] max-w-lg tracking"
         >
-          Crafting seamless experiences and bold visuals. High school student by
-          day, creative thinker, and aspiring innovator by night.
+         Full-Stack Engineer bridging AI & Web3, building accessible, high-performance systems for real-world users
         </motion.div>
         <motion.div
           id="about"

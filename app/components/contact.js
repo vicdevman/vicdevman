@@ -11,10 +11,18 @@ export default function Contact() {
         <p className="text-[1rem] mb-3 leading text-neutral-500/95 font-[satoshi-medium] max-w-lg tracking-tight">
           I’m always interested in exploring new opportunities, collaborating,
           or exchanging ideas with like-minded individuals. Feel free to book a
-          call or email me if you'd like to see my portfolio deck or to discuss
-          a potential project.
+          call or{" "}
+          <a
+            href="mailto:vicdevmanx@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-neutral-600 cursor-pointer"
+          >
+            email
+          </a>{" "}
+          me if you'd like to see my portfolio deck or to discuss a potential
+          project.
         </p>{" "}
-
         <ContactForm />
       </div>
     </div>
