@@ -69,7 +69,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             key={index}
-            className="group flex items-center text-neutral-900 px-4.5  py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors duration-300 rounded-2xl"
+            className="group flex items-center text-neutral-900 px-4.5 max-sm:px-3 py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors duration-300 rounded-2xl"
           >
             <div className="relative flex items-center justify-center">
               {Icon && <Icon size={19} />}
