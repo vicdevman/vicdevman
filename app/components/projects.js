@@ -1,3 +1,6 @@
+'use client';
+
+
 import React from "react";
 import LogoLoop from "@/components/LogoLoop";
 import Image from "next/image";
@@ -6,6 +9,7 @@ import { Phone } from "lucide-react";
 import { Laptop, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { projects } from "../data/projects.data";
+import { motion } from "framer-motion";
 
 
 const SvgTemplate = ({ image }) => {
@@ -65,6 +69,11 @@ export default function Projects({show = true}) {
     },
   ];
 
+  const fadeInUp = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="relative z-5 flex flex-col justify-center mt-20">
       <div className="max-w-220 mx-auto px-6 flex flex-col items-center">
@@ -88,10 +97,16 @@ export default function Projects({show = true}) {
           Here’s What I’ve Been Up To.
         </h1>
 
-        <div className="grid grid-cols-2 max-md:grid-cols-1 gap-6 mt-10">
+        <motion.div
+          id="work"
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2, delay: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeOut" }} className="grid grid-cols-2 max-md:grid-cols-1 gap-6 mt-10">
           {projects &&
             projects.map((project) => (
-              <div className="border flex flex-col items-start gap-4 bg-white border-neutral-200/90 p-4 rounded-3xl">
+              <div key={project.id} className="border flex flex-col items-start gap-4 bg-white border-neutral-200/90 p-4 rounded-3xl">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -113,7 +128,7 @@ export default function Projects({show = true}) {
                 </Link>
               </div>
             ))}
-        </div>
+        </motion.div>
         <div className={`${show ? 'block' : 'hidden'} mt-10`}>
           <Link
             href="/projects"

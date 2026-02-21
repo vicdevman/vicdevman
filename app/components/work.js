@@ -1,4 +1,7 @@
+'use client';
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const experinces = [
   {
@@ -19,13 +22,26 @@ const experinces = [
 ];
 
 export default function Work() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
     <div className="flex flex-col items-start mt-30 ">
       <div className=" max-w-3xl mx-auto px-6">
         <h1 className="text-2xl font-[satoshi-bold] mb-10 tracking-tight">
           Work Experience
         </h1>
-        <div className="flex flex-col gap-8 mb-8 w-full">
+        <motion.div
+          id="work"
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2, delay: 0.5 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="flex flex-col gap-8 mb-8 w-full"
+        >
           {experinces.map((experience, index) => (
             <div
               key={index}
@@ -48,7 +64,7 @@ export default function Work() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
