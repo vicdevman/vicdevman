@@ -63,7 +63,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="flex flex-col mt-40 mb-60">
+    <div className="flex flex-col mt-40 max-w-sm:mt-36 mb-60">
       {/* <div class="fixed top-0 left-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
 <div class="fixed top-0 right-0 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div> */}
 

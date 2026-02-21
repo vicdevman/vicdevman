@@ -32,7 +32,8 @@ export default function Header() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2}}
-          transition={{ duration: 0.3, ease: "easeOut" }} className="border border-neutral-200/90 shadow-[inset_0_2px_4px_rgba(250,250,250),_inset_0_-2px_4px_rgba(255,255,255)] bg-white/20 backdrop-blur-lg p-1 px-1.5 rounded-3xl fixed left-1/2 z-100 transform -translate-x-1/2 top-8 flex items-center gap-1">
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="border border-neutral-200/90 shadow-[inset_0_2px_4px_rgba(250,250,250),_inset_0_-2px_4px_rgba(255,255,255)] bg-white/20 backdrop-blur-lg p-1 px-1.5 rounded-3xl fixed left-1/2 z-100 transform -translate-x-1/2 top-8 max-w-sm:top-6 flex items-center gap-1">
       <Link
         href="/"
         className="group flex items-center text-neutral-900 gap-2 px-5 py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors rounded-2xl"
