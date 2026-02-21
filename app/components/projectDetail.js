@@ -48,14 +48,14 @@ export default function ProjectDetail() {
     <div className=" flex flex-col mt-30 mb-12">
       <div className=" max-w-3xl w-full mx-auto px-6">
         {" "}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
             {/* <div onClick={() => router.back()} className="flex gap-2 mb-4 cursor-pointer text-sm text-neutral-400 hover:text-neutral-600 transition items-center">
                 <ArrowLeft size={18}/> Go back
             </div> */}
           <h1 className="max-sm:text-[1.8rem] text-[2.4rem] leading-tight tracking-tight font-[satoshi-bold]">
             {project.title}{" "}
           </h1>
-          <p className="text-[1.1rem] mb-2 leading-tight text-neutral-500 font-[satoshi-medium] tracking">
+          <p className="text-[1.1rem] mb-2 text-neutral-500 font-[satoshi-normal] tracking">
             {project.description}
           </p>
         </div>
@@ -66,7 +66,7 @@ export default function ProjectDetail() {
           {project.longDescription.split("\n").map((paragraph, index) => (
             <p
               key={index}
-              className="text-[1rem] text-neutral-500 font-[satoshi-medium]"
+              className="text-[1rem] text-neutral-500 font-[satoshi-normal]"
             >
               {paragraph}
             </p>
@@ -81,7 +81,7 @@ export default function ProjectDetail() {
             {project.techStack.map((tech, index) => (
               <div
                 key={index}
-                className="text-sm font-[satoshi-normal] p-1.5 px-3 bg-[#e1f9dc] text-[#21930b] rounded-xl"
+                className="text-sm font-[satoshi-normal] p-1.5 px-3 bg-[#e1f9dc] text-[#21930b] rounded-lg"
               >
                 {tech}
               </div>
@@ -113,7 +113,7 @@ export default function ProjectDetail() {
                 {project.category.map((tech, index) => (
                   <div
                     key={index}
-                    className="text-sm font-[satoshi-normal] p-1.5 px-3 bg-[#e1f9dc] text-[#21930b] rounded-xl"
+                    className="text-sm font-[satoshi-normal] p-1.5 px-3 bg-[#e1f9dc] text-[#21930b] rounded-lg"
                   >
                     {tech}
                   </div>
