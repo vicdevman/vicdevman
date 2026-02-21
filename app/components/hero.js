@@ -78,7 +78,7 @@ rounded-3xl p-8"></div> */}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2}}
-          transition={{ duration: 0.1, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className="w-26 h-26 overflow-hidden rounded-full"
         >
           <Image
