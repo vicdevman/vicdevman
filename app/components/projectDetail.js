@@ -362,7 +362,7 @@ export default function ProjectDetail() {
                     e.stopPropagation();
                     closeLightbox();
                   }}
-                  className="absolute -top-4 right-4 text-white bg-black/40 py-3.5 cursor-pointer p-5 rounded-full"
+                  className="fixed top-20 right-4 text-white bg-black/40 py-3.5 cursor-pointer p-5 rounded-full"
                   aria-label="Close"
                 >
                   ✕
