@@ -33,10 +33,10 @@ export default function Header() {
           whileInView="animate"
           viewport={{ once: true, amount: 0.2}}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="border border-neutral-200/90 shadow-[inset_0_2px_4px_rgba(250,250,250),_inset_0_-2px_4px_rgba(255,255,255)] bg-white/20 backdrop-blur-lg p-1 px-1.5 rounded-3xl fixed left-1/2 z-100 transform -translate-x-1/2 top-8 max-w-sm:top-6 flex items-center gap-1">
+          className="border border-neutral-300/60 shadow-[inset_0_2px_8px_rgba(255,255,255,0.5),_inset_0_-2px_8px_rgba(255,255,255,0.5)] bg-white/20 backdrop-blur-lg p-1 px-1.5 rounded-3xl fixed left-1/2 z-100 transform -translate-x-1/2 top-8 max-w-sm:top-6 flex items-center gap-1">
       <Link
         href="/"
-        className="group flex items-center text-neutral-900 gap-2 px-5 py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors rounded-2xl"
+        className="group flex items-center text-neutral-800 gap-2 px-5 py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors rounded-2xl"
       >
         <div className="relative">
           <House size={18} />
@@ -63,7 +63,7 @@ export default function Header() {
         </div>
       </Link>
 
-      <div className="h-6 w-[1.5px] bg-neutral-200/90"></div>
+      <div className="h-6 w-[1.5px] bg-neutral-400/40"></div>
       {header.map((item, index) => {
         let Icon;
         let label;
@@ -87,7 +87,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             key={index}
-            className="group flex items-center text-neutral-900 px-4.5 max-sm:px-3 py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors duration-300 rounded-2xl"
+            className="group flex items-center text-neutral-800 px-4.5 max-sm:px-3 py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors duration-300 rounded-2xl"
           >
             <div className="relative flex items-center justify-center">
               {Icon && <Icon size={19} />}
@@ -116,7 +116,7 @@ export default function Header() {
         );
       })}
 
-      <div className="h-6 w-[1.5px] bg-neutral-200/90 mx-2"></div>
+      <div className="h-6 w-[1.5px] bg-neutral-400/20 mx-2"></div>
 
       <button className="bg-[#191919] hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] shadow text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition">
         Resume

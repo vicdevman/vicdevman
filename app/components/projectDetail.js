@@ -42,13 +42,30 @@ export default function ProjectDetail() {
   const { id } = useParams();
   const router = useRouter();
 
+  const fadeInUp = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+  };
+
+  const fadeInDown = {
+    initial: { opacity: 0, y: -30 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   const project = projects.find((project) => project.id === id);
 
   return (
     <div className=" flex flex-col mt-30 mb-12">
       <div className=" max-w-3xl w-full mx-auto px-6">
         {" "}
-        <div className="flex flex-col gap-3">
+        <motion.div
+          className="flex flex-col gap-3"
+          variants={fadeInDown}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+        >
             {/* <div onClick={() => router.back()} className="flex gap-2 mb-4 cursor-pointer text-sm text-neutral-400 hover:text-neutral-600 transition items-center">
                 <ArrowLeft size={18}/> Go back
             </div> */}
@@ -58,7 +75,14 @@ export default function ProjectDetail() {
           <p className="text-[1.1rem] mb-2 text-neutral-500 font-[satoshi-normal] tracking">
             {project.description}
           </p>
-        </div>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.45, ease: "easeOut", delay: 0.1 }}
+        >
         <div className="border flex flex-col items-start gap-2 bg-neutral-100/50 border-neutral-200/50 p-6 rounded-3xl mt-6 mb-6">
           <h3 className="text-[1rem] font-[satoshi-bold] text-neutral-900 tracking-tight">
             Description
@@ -150,6 +174,14 @@ export default function ProjectDetail() {
             <ChevronRight size={20} />
           </button>
         </div>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.45, ease: "easeOut", delay: 0.15 }}
+        >
         <div className="w-full cursor-pointer rounded-2xl relative mt-8 bg-neutral-100 p-4 flex items-center justify-center border border-neutral-200/40 shadow-[inset_0_2px_4px_rgba(255,2550,255),_inset_0_-2px_4px_rgba(255,255,255)]">
           {/* <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 left-4"></div>
           <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 right-2"></div>
@@ -164,6 +196,7 @@ export default function ProjectDetail() {
             className="object-cover w-200 h-full rounded-lg shadow-[0_8px_20px_0_rgba(0,0,0,0.15)]"
           />
         </div>
+        </motion.div>
         <div className="flex flex-wrap mt-8 gap-4">
         {project.images && project.images.map((image, index) => (
           <div

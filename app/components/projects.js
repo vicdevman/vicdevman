@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 
 import React from "react";
 import LogoLoop from "@/components/LogoLoop";
@@ -74,9 +73,22 @@ export default function Projects({show = true}) {
     animate: { opacity: 1, y: 0 },
   };
 
+  const fadeInDown = {
+    initial: { opacity: 0, y: -30 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
-    <div className="relative z-5 flex flex-col justify-center mt-20">
+    <div id="projects" className="relative z-5 flex flex-col justify-center mt-20">
       <div className="max-w-220 mx-auto px-6 flex flex-col items-center">
+        <motion.div
+          variants={fadeInDown}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+          className="w-full flex flex-col items-center"
+        >
         <div className="w-42 cursor-default relative overflow-hidden h-full">
           <LogoLoop
             logos={techLogos}
@@ -96,6 +108,8 @@ export default function Projects({show = true}) {
         <h1 className="text-3xl max-sm:text-2xl font-[satoshi-bold] tracking-tight -mt-2 mb-2 relative z-20">
           Here’s What I’ve Been Up To.
         </h1>
+
+        </motion.div>
 
         <motion.div
           id="work"
@@ -122,7 +136,7 @@ export default function Projects({show = true}) {
                   {project.longDescription}
                 </p>
 
-                <Link href={`/projects/${project.id}`} className="whitespace-nowrap bg-neutral-100 px-5 py-3 text-md cursor-pointer rounded-xl font-[satoshi-medium] flex justify-between w-40 transition hover:scale-x-108 hover:bg-neutral-200/80 origin-left items-center">
+                <Link href={`/projects/${project.id}`} className="whitespace-nowrap bg-neutral-100 px-5 py-3 text-md cursor-pointer rounded-xl font-[satoshi-medium] flex justify-between w-40 transition hover:scale-x-108 active:scale-x-108 hover:bg-neutral-200/80 origin-left items-center">
                   View Project
                   <ChevronRight size={18} />
                 </Link>

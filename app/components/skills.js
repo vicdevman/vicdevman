@@ -1,5 +1,8 @@
+"use client";
+
 import { FileText } from "lucide-react";
 import React from "react";
+import { motion } from "framer-motion";
 import GlassIcons from "../../components/GlassIcons";
 import { Layers } from "lucide-react";
 import { Bot } from "lucide-react";
@@ -124,17 +127,41 @@ const portfolioSections = [
 ];
 
 export default function Skills() {
+  const fadeInUp = {
+    initial: { opacity: 0, y: 50 },
+    animate: { opacity: 1, y: 0 },
+  };
+
+  const fadeInDown = {
+    initial: { opacity: 0, y: -30 },
+    animate: { opacity: 1, y: 0 },
+  };
   return (
     <div className=" flex flex-col mt-110">
       <div className=" max-w-2xl mx-auto px-6">
-        <h1 className="text-3xl max-sm:text-2xl text-center font-[satoshi-bold] mb-1 tracking-tight">
-          How Can I Help?
-        </h1>
-        <p className="text-lg max-sm:text-[1rem] text-center text-neutral-500 font-[satoshi-medium] tracking">
-          Let’s turn your vision into something amazing.
-        </p>
+        <motion.div
+          variants={fadeInDown}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.35, ease: "easeOut" }}
+        >
+          <h1 className="text-3xl max-sm:text-2xl text-center font-[satoshi-bold] mb-1 tracking-tight">
+            How Can I Help?
+          </h1>
+          <p className="text-lg max-sm:text-[1rem] text-center text-neutral-500 font-[satoshi-medium] tracking">
+            Let’s turn your vision into something amazing.
+          </p>
+        </motion.div>
 
-        <div className="grid grid-cols-2 w-full gap-2 mt-8">
+        <motion.div
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
+        >
+          <div className="grid grid-cols-2 w-full gap-2 mt-8">
           {portfolioSections &&
             portfolioSections.map((section) => (
               <div
@@ -167,9 +194,10 @@ export default function Skills() {
                   ))}
                 </div> */}
                 </div>
-              </div>
-            ))}
-        </div>
+                </div>
+              ))}
+          </div>
+        </motion.div>
       </div>
     </div>
   );

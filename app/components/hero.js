@@ -62,6 +62,16 @@ export default function Hero() {
     animate: { opacity: 1, y: 0 },
   };
 
+   const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const yOffset = -80; // Adjust this value to add more or less space
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="flex flex-col mt-40 max-w-sm:mt-36 mb-60">
       {/* <div class="fixed top-0 left-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
@@ -126,7 +136,7 @@ rounded-3xl p-8"></div> */}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           className="flex items-center gap-4 flex-wrap"
         >
-          <button className="group whitespace-nowrap flex gap-2 items-center bg-[#191919] tracking-tight text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition-colors duration-300">
+          <button onClick={() => scrollToSection("projects")} className="group whitespace-nowrap flex gap-2 items-center bg-[#191919] tracking-tight text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition-colors duration-300">
             View my Work
             <span className="flex items-center overflow-hidden w-0 group-hover:w-5 transition-all duration-300 ease-out">
               <span className="translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-active:translate-y-0 group-active:opacity-100 transition-all duration-300 ease-out">
