@@ -9,6 +9,7 @@ import { Laptop, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { projects } from "../data/projects.data";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 
 const SvgTemplate = ({ image }) => {
@@ -24,6 +25,9 @@ const SvgTemplate = ({ image }) => {
 };
 
 export default function Projects({show = true}) {
+
+  const router = useRouter();
+
   const techLogos = [
     {
       node: <SvgTemplate image="/icon/html-124-svgrepo-com.svg" />,
@@ -79,7 +83,7 @@ export default function Projects({show = true}) {
   };
 
   return (
-    <div id="projects" className="relative z-5 flex flex-col justify-center mt-20">
+    <div id="projects" className="cursor-pointer relative z-5 flex flex-col justify-center mt-20">
       <div className="max-w-220 mx-auto px-6 flex flex-col items-center">
         <motion.div
           variants={fadeInDown}
@@ -120,7 +124,7 @@ export default function Projects({show = true}) {
           transition={{ duration: 0.5, ease: "easeOut" }} className="grid grid-cols-2 max-md:grid-cols-1 gap-6 mt-10">
           {projects &&
             projects.map((project) => (
-              <div key={project.id} className="border flex flex-col items-start gap-4 bg-white border-neutral-200/90 p-4 rounded-3xl">
+              <div onClick={() => router.push(`/projects/${project.id}`)} key={project.id} className="border flex flex-col items-start gap-4 bg-white border-neutral-200/90 p-4 rounded-3xl">
                 <Image
                   src={project.image}
                   alt={project.title}
