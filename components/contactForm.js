@@ -92,7 +92,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           placeholder="Enter your Name"
-          className="border border-neutral-200 bg-neutral-100/60 h-12 placeholder:text-neutral-400 p-4 font-[satoshi-medium] rounded-xl"
+          className="border border-neutral-200 bg-neutral-100/60 h-12 placeholder:text-neutral-400 p-3.5 font-[satoshi-medium] rounded-xl"
           required
           disabled={isSubmitting}
         />
@@ -102,7 +102,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           placeholder="Enter your Email"
-          className="border border-neutral-200 font-[satoshi-medium] placeholder:text-neutral-400 p-4 bg-neutral-100/60 h-12 rounded-xl"
+          className="border border-neutral-200 font-[satoshi-medium] placeholder:text-neutral-400 p-3.5 bg-neutral-100/60 h-12 rounded-xl"
           required
           disabled={isSubmitting}
         />
@@ -112,7 +112,7 @@ export default function ContactForm() {
         value={formData.message}
         onChange={handleChange}
         placeholder="Write your Message"
-        className="border border-neutral-200 font-[satoshi-medium] placeholder:text-neutral-400 p-4 bg-neutral-100/60 h-30 rounded-xl"
+        className="border border-neutral-200 font-[satoshi-medium] placeholder:text-neutral-400 p-3.5 bg-neutral-100/60 h-30 rounded-xl"
         required
         disabled={isSubmitting}
       />

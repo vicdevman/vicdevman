@@ -29,18 +29,16 @@ export default function Contact() {
           </h1>
           <p className="text-[1rem] mb-3 leading text-neutral-500/95 font-[satoshi-medium] max-w-lg tracking-tight">
             I’m always interested in exploring new opportunities, collaborating,
-            or exchanging ideas with like-minded individuals. Feel free to book a
-            call or{" "}
-            <a
+            or exchanging ideas with like-minded individuals. Feel free to 
+            {" "}<a
               href="mailto:vicdevmanx@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-neutral-600 cursor-pointer"
+              className="underline hover:text-neutral-700 text-neutral-600 font-[satoshi-medium] cursor-pointer"
             >
               email
             </a>{" "}
-            me if you'd like to see my portfolio deck or to discuss a potential
-            project.
+            me if you’d like to discuss a project.
           </p>
         </motion.div>
 

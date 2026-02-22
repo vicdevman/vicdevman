@@ -137,8 +137,8 @@ export default function Skills() {
     animate: { opacity: 1, y: 0 },
   };
   return (
-    <div className=" flex flex-col mt-110">
-      <div className=" max-w-2xl mx-auto px-6">
+    <div className=" flex flex-col mt-20">
+      <div className=" max-w-xl mx-auto px-6">
         <motion.div
           variants={fadeInDown}
           initial="initial"

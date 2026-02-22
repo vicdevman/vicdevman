@@ -45,7 +45,7 @@ export default function Work() {
           {experinces.map((experience, index) => (
             <div
               key={index}
-              className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8 max-sm:gap-2 w-full"
+              className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-10 max-sm:gap-2 w-full"
             >
               {/* Duration */}
               <p className="text-sm sm:text-md font-[satoshi-bold] text-neutral-400/90 tracking-tight shrink-0">
