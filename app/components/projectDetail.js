@@ -280,7 +280,7 @@ export default function ProjectDetail() {
             />
           </div>
         </motion.div>
-        <div className="flex flex-wrap mt-8 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           {project.images &&
             project.images.map((image, index) => (
               <div
@@ -362,7 +362,7 @@ export default function ProjectDetail() {
                     e.stopPropagation();
                     closeLightbox();
                   }}
-                  className="fixed top-20 right-4 text-white bg-black/40 py-3.5 cursor-pointer p-5 rounded-full"
+                  className="fixed top-20 max-sm:top-26 right-4 text-white bg-black/40 py-3.5 cursor-pointer p-5 rounded-full"
                   aria-label="Close"
                 >
                   ✕
