@@ -1,11 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { projects } from "../data/projects.data";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useParams } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import { Link2 } from "lucide-react";
@@ -80,6 +80,38 @@ export default function ProjectDetail() {
     showPrevious = false;
     showNext = true;
   }
+
+  // Lightbox state
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+
+  // Build images array (put main image first)
+  const images = project.images && project.images.length ? [project.image, ...project.images] : [project.image];
+
+  const openLightbox = (index = 0) => {
+    setPhotoIndex(index);
+    setIsOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeLightbox = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "";
+  };
+
+  const prevPhoto = () => setPhotoIndex((p) => (p - 1 + images.length) % images.length);
+  const nextPhoto = () => setPhotoIndex((p) => (p + 1) % images.length);
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (!isOpen) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") prevPhoto();
+      if (e.key === "ArrowRight") nextPhoto();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [isOpen, images.length]);
 
   return (
     <div className=" flex flex-col mt-30 mb-12">
@@ -233,7 +265,7 @@ export default function ProjectDetail() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.45, ease: "easeOut", delay: 0.15 }}
         >
-          <div className="w-full cursor-pointer rounded-2xl relative mt-8 bg-neutral-100 p-4 flex items-center justify-center border border-neutral-200/40 shadow-[inset_0_2px_4px_rgba(255,2550,255),_inset_0_-2px_4px_rgba(255,255,255)]">
+          <div onClick={() => openLightbox(0)} className="w-full cursor-pointer rounded-2xl relative mt-8 bg-neutral-100 p-4 flex items-center justify-center border border-neutral-200/40 shadow-[inset_0_2px_4px_rgba(255,2550,255),inset_0_-2px_4px_rgba(255,255,255)]">
             {/* <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 left-4"></div>
           <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 right-2"></div>
           <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 bottom-3.5 right-2"></div>
@@ -244,7 +276,7 @@ export default function ProjectDetail() {
               alt={project.title}
               width={1200}
               height={600}
-              className="object-cover w-200 h-full rounded-lg shadow-[0_8px_20px_0_rgba(0,0,0,0.15)]"
+              className="object-cover w-full h-auto rounded-lg shadow-[0_8px_20px_0_rgba(0,0,0,0.15)]"
             />
           </div>
         </motion.div>
@@ -255,7 +287,7 @@ export default function ProjectDetail() {
                 key={index}
                 className="text-sm font-[satoshi-normal] rounded-xl"
               >
-                <div className="w-full cursor-pointer rounded-2xl relative bg-neutral-100 px-4 py-4 flex items-center justify-center border border-neutral-200/40 shadow-[inset_0_2px_4px_rgba(255,2550,255),_inset_0_-2px_4px_rgba(255,255,255)]">
+                <div onClick={() => openLightbox(index + 1)} className="w-full cursor-pointer rounded-2xl relative bg-neutral-100 px-4 py-4 flex items-center justify-center border border-neutral-200/40 shadow-[inset_0_2px_4px_rgba(255,2550,255),inset_0_-2px_4px_rgba(255,255,255)]">
                   {/* <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 left-4"></div>
               <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 right-2"></div>
               <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 bottom-3.5 right-2"></div>
@@ -266,12 +298,79 @@ export default function ProjectDetail() {
                     alt={project.title}
                     width={1200}
                     height={600}
-                    className="object-cover max-w-79 w-full h-full rounded-lg"
+                    className="object-cover w-full h-auto rounded-lg"
                   />
                 </div>
               </div>
             ))}
         </div>
+
+        {/* Lightbox modal */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              className="fixed inset-0 z-50 flex items-center justify-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={closeLightbox}
+            >
+              <motion.div
+                className="absolute inset-0 bg-black/70"
+                onClick={(e) => e.stopPropagation()}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              />
+
+              <div className="relative z-50 max-w-[100vw] max-h-[90vh] w-full flex items-center justify-center">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    prevPhoto();
+                  }}
+                  className="cursor-pointer absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/40 p-3 rounded-full"
+                >
+                  <ChevronLeft size={28} />
+                </button>
+
+                <motion.img
+                  key={photoIndex}
+                  src={images[photoIndex]}
+                  alt={project.title}
+                  initial={{ opacity: 0, scale: 0.96, x: 40 }}
+                  animate={{ opacity: 1, scale: 1, x: 0 }}
+                  exit={{ opacity: 0, scale: 0.96, x: -40 }}
+                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  className="object-contain max-h-screen max-w-[100vw] w-auto h-auto rounded-lg py-2"
+                  onClick={(e) => e.stopPropagation()}
+                />
+
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    nextPhoto();
+                  }}
+                  className="cursor-pointer absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/40 p-3 rounded-full"
+                >
+                  <ChevronRight size={28} />
+                </button>
+
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    closeLightbox();
+                  }}
+                  className="absolute -top-4 right-4 text-white bg-black/40 py-3.5 cursor-pointer p-5 rounded-full"
+                  aria-label="Close"
+                >
+                  ✕
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
