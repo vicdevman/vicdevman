@@ -26,14 +26,14 @@ const getAdminEmailTemplate = (name, email, message) => {
 
 <body
   style="
-    margin:0;
+ margin:0;
     padding:0px;
     background:#f8fafc;
     font-family:'satoshi-medium', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     color:#0a0a0a;
   "
 >
-  <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+  <table  width="100%" cellpadding="0" cellspacing="0" role="presentation">
     <tr>
       <td align="center">
 
@@ -53,18 +53,12 @@ const getAdminEmailTemplate = (name, email, message) => {
 
           <!-- Header -->
           <tr>
-            <td
-              style="
-                background:linear-gradient(90deg,#0b0b0b,#191919);
-                padding:20px 26px;
-              "
-            >
+            <td style="padding:24px;background:#f8fafc;">
               <h2
                 style="
                   margin:0;
-                  color:#ffffff;
                   font-family:'satoshi-bold',sans-serif;
-                  font-size:18px;
+                  font-size:20px;
                 "
               >
                 New message from your portfolio
