@@ -83,7 +83,7 @@ export default function Projects({show = true}) {
   };
 
   return (
-    <div id="projects" className="cursor-pointer relative z-5 flex flex-col justify-center mt-110">
+    <div id="projects" className="cursor-pointer relative z-5 flex flex-col justify-center">
       <div className="max-w-220 mx-auto px-6 flex flex-col items-center">
         <motion.div
           variants={fadeInDown}

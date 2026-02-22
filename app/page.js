@@ -15,8 +15,9 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-
-      <Projects />
+      <div className=" mt-110">
+        <Projects />
+      </div>
       <Work />
       <Skills />
       <Contact />
