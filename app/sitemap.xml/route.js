@@ -10,7 +10,7 @@ function formatDate(date = new Date()) {
 }
 
 export async function GET() {
-  const siteUrl = getSiteUrl().replace(/\/$/, "");
+  const siteUrl = getSiteUrl().replace(/\/$/, "")
   const today = formatDate();
 
   const urls = [
