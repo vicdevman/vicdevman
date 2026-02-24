@@ -1,12 +1,10 @@
-'use client';
+"use client";
 
 import { ChevronRight } from "lucide-react";
-import { House, Twitter, Linkedin, Github } from "lucide-react";
+import { House, Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
-
 
 export default function Header() {
   const header = [
@@ -20,20 +18,20 @@ export default function Header() {
   ];
 
   const fadeInDown = {
-  initial: { opacity: 0, y: -80 },
-  animate: { opacity: 1, y: 0 },
-};
-
+    initial: { opacity: 0, y: -80 },
+    animate: { opacity: 1, y: 0 },
+  };
 
   return (
     <motion.div
-          id="about"
-          variants={fadeInDown}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true, amount: 0.2}}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          className="border border-neutral-300/60 shadow-[inset_0_2px_8px_rgba(255,255,255,0.5),_inset_0_-2px_8px_rgba(255,255,255,0.5)] bg-white/20 backdrop-blur-lg p-1 px-1.5 rounded-3xl fixed left-1/2 z-100 transform -translate-x-1/2 top-8 max-w-sm:top-6 flex items-center gap-1">
+      id="about"
+      variants={fadeInDown}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className="border border-neutral-300/60 shadow-[inset_0_2px_8px_rgba(255,255,255,0.5),_inset_0_-2px_8px_rgba(255,255,255,0.5)] bg-white/20 backdrop-blur-lg p-1 px-1.5 rounded-3xl fixed left-1/2 z-100 transform -translate-x-1/2 top-8 max-w-sm:top-6 flex items-center gap-1"
+    >
       <Link
         href="/"
         className="group flex items-center text-neutral-800 gap-2 px-5 py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors rounded-2xl"
@@ -67,9 +65,31 @@ export default function Header() {
       {header.map((item, index) => {
         let Icon;
         let label;
+        let fullIcon;
 
         if (item.icon === "Twitter") {
-          Icon = Twitter;
+            fullIcon = (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                strokeWidth="1"
+                shapeRendering="geometricPrecision"
+                textRendering="geometricPrecision"
+                imageRendering="optimizeQuality"
+                fillRule="evenodd"
+                clipRule="evenodd"
+                viewBox="0 0 512 462.799"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fillRule="nonzero"
+                  d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z"
+                />
+              </svg>
+            );
+          Icon = null
           label = "Twitter";
         }
         if (item.icon === "Github") {
@@ -90,7 +110,7 @@ export default function Header() {
             className="group flex items-center text-neutral-800 px-4.5 max-sm:px-3 py-4 cursor-pointer hover:bg-neutral-400/20 transition-colors duration-300 rounded-2xl"
           >
             <div className="relative flex items-center justify-center">
-              {Icon && <Icon size={19} />}
+              {Icon ? <Icon size={19} /> : fullIcon}
 
               {/* Tooltip */}
               <div
