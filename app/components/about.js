@@ -25,23 +25,35 @@ export default function About() {
           About
         </h1>
         <p className="text-[1rem] mb-2 leading-tight text-neutral-500/95 font-[satoshi-medium] max-w-lg tracking">
-           I build interactive,
-          production-ready applications that combine clean frontend experience
-          with intelligent backend systems.
-          <br /> <br />
-          My work sits at the intersection of full-stack engineering, AI
-          automation, and Web3 integration. I focus on turning complex ideas
-          into working products fast, without sacrificing structure,
-          scalability, or long-term maintainability.
-          <br /> <br />
-          I am especially interested in helping Web3 startups and SaaS founders
+          I build interactive, production-ready applications that merge clean
+          frontend experiences with intelligent backend systems.
+          <br />
+          <br />
+          My work lives at the intersection of full-stack engineering, AI
+          automation, and Web3 integration. I turn complex ideas into
+          structured, scalable products fast, without compromising long-term
+          maintainability or code quality.
+          <br />
+          <br />
+          I value open communication and transparency in every collaboration. I
+          take ownership of what I build, from architecture decisions to
+          deployment. If something ships under my name, it reflects a high
+          standard of craftsmanship.
+          <br />
+          <br />
+          I work fluently in English and collaborate across time zones,
+          operating on UTC+1 while remaining flexible to global teams.
+          <br />
+          <br />
+          I am especially focused on helping Web3 startups and SaaS founders
           embed AI directly into their platforms, automate operational
           workflows, and launch systems that feel modern, intelligent, and
           reliable.
-          <br /> <br />
-          I approach engineering with product thinking. Clean interfaces matter.
-          Scalable architecture matters. Shipping fast matters.
-        </p>{" "}
+          <br />
+          <br />
+          Clean interfaces matter. Scalable architecture matters. Shipping with
+          precision matters.
+        </p>
         <motion.div
           id="about"
           variants={fadeInUp}
