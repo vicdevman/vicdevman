@@ -6,6 +6,10 @@
   <p>
     <a href="https://vicdevman.dev" target="_blank">Portfolio</a>
   </p>
+
+  <div>
+  <img src="https://komarev.com/ghpvc/?username=vicdevman&color=blueviolet" alt="vicdevman profile views" />
+</div>
 </div>
 
 ---
@@ -78,6 +82,4 @@ Let’s turn your vision into something amazing.
 - **Website:** [vicdevman.dev](https://vicdevman.dev)
 - **Timezone:** UTC+1 (Flexible to global teams)
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=vicdevman&color=blueviolet" alt="vicdevman profile views" />
-</div>
+
