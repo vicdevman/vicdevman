@@ -1,5 +1,5 @@
 <div>
-  <h1 style='font-weight: 600;'>Hi, Victor Adeiza (@vicdevman)</h1>
+  <h1 style='font-weight: 600;'>Hey, I'm Victor Adeiza (@vicdevman)</h1>
   <h3>Full-Stack Engineer | AI Automation | Web3 Integration</h3>
   <p>I engineer accessible, intelligent experiences for the web.</p>
   
