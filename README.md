@@ -1,12 +1,10 @@
 <div>
-  <img src="https://vicdevman.dev/vicdevman.webp" alt="Victor Adeiza" width="150" style="border-radius: 50%" />
-  <h1>Victor Adeiza</h1>
+  <h1 style='font-weight: 600;'>Victor Adeiza</h1>
   <h3>Full-Stack Engineer | AI Automation | Web3 Integration</h3>
   <p>I engineer accessible, intelligent experiences for the web.</p>
   
   <p>
-    <a href="https://vicdevman.dev" target="_blank">Portfolio</a> • 
-    <a href="https://github.com/vicdevman">GitHub</a>
+    <a href="https://vicdevman.dev" target="_blank">Portfolio</a>
   </p>
 </div>
 
