@@ -60,18 +60,18 @@ export default function Work() {
                   ${isExpanded ? "bg-white border-neutral-200 shadow-sm" : "bg-neutral-50/50 border-neutral-200/50 hover:bg-neutral-50 hover:border-neutral-200"}`}
               >
                 {/* Header / Clickable Area */}
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6 w-full p-6 md:p-6">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6 w-full p-5 md:p-6">
                   {/* Left Side: Role + Company */}
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 flex-1">
                     <h2 className="text-[1.1rem] font-[satoshi-bold] text-neutral-900 tracking-tight">
                       {experience.title}
                     </h2>
 
-                    <span className="hidden sm:block text-neutral-300 font-[satoshi-normal] mr-2">
+                    <span className="hidden sm:block text-neutral-300 font-[satoshi-normal] mr-1">
                       at
                     </span>
 
-                    <div className="inline-flex w-fit -ml-2 items-center text-[0.9rem] font-[satoshi-bold] px-3 py-1 bg-blue-50 border border-blue-100/50 text-blue-600 rounded-lg">
+                    <div className="inline-flex w-fit -ml-1 items-center text-[0.9rem] font-[satoshi-bold] px-3 py-1 bg-blue-50 border border-blue-100/50 text-blue-600 rounded-lg">
                       {experience.company}
                     </div>
                   </div>

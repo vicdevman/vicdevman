@@ -359,7 +359,7 @@ export default function ProjectDetail() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center"
+            className="fixed inset-0 z-5000 flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -415,7 +415,7 @@ export default function ProjectDetail() {
                   e.stopPropagation();
                   closeLightbox();
                 }}
-                className="absolute top-6 right-6 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 p-4 rounded-full backdrop-blur-md transition-all z-50 cursor-pointer"
+                className="absolute top-6 right-6 text-white/50 hover:text-white bg-white/5 hover:bg-white/10 p-4 px-5.5 rounded-full backdrop-blur-md transition-all z-50 cursor-pointer"
                 aria-label="Close"
               >
                 ✕
