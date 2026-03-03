@@ -1,13 +1,15 @@
 <div>
-  <img src="https://vicdevman.dev/vicdevman.webp" alt="Victor Adeiza" width="150" style="border-radius: 50%" />
-  <h1>Victor Adeiza</h1>
+  <h1 style='font-weight: 600;'>Hey, I'm Victor Adeiza (@vicdevman)</h1>
   <h3>Full-Stack Engineer | AI Automation | Web3 Integration</h3>
   <p>I engineer accessible, intelligent experiences for the web.</p>
   
   <p>
-    <a href="https://vicdevman.dev" target="_blank">Portfolio</a> • 
-    <a href="https://github.com/vicdevman">GitHub</a>
+    <a href="https://vicdevman.dev" target="_blank">Portfolio</a>
   </p>
+
+  <div>
+  <img src="https://komarev.com/ghpvc/?username=vicdevman&color=blueviolet" alt="vicdevman profile views" />
+</div>
 </div>
 
 ---
@@ -80,6 +82,4 @@ Let’s turn your vision into something amazing.
 - **Website:** [vicdevman.dev](https://vicdevman.dev)
 - **Timezone:** UTC+1 (Flexible to global teams)
 
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=vicdevman&color=blueviolet" alt="vicdevman profile views" />
-</div>
+
