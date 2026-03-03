@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div>
+  <img src="https://vicdevman.dev/vicdevman.webp" alt="Victor Adeiza" width="150" style="border-radius: 50%" />
+  <h1>Victor Adeiza</h1>
+  <h3>Full-Stack Engineer | AI Automation | Web3 Integration</h3>
+  <p>I engineer accessible, intelligent experiences for the web.</p>
+  
+  <p>
+    <a href="https://vicdevman.dev" target="_blank">Portfolio</a> • 
+    <a href="https://github.com/vicdevman">GitHub</a>
+  </p>
+</div>
 
-## Getting Started
+---
 
-First, run the development server:
+## 👋 About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I build interactive, production-ready applications that merge clean frontend experiences with intelligent backend systems. My work lives at the intersection of **Full-Stack Engineering, AI Automation, and Web3 Integration**. I turn complex ideas into structured, scalable products fast, without compromising long-term maintainability or code quality.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I am especially focused on helping Web3 startups and SaaS founders embed AI directly into their platforms, automate operational workflows, and launch systems that feel modern, intelligent, and reliable.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+> **Clean interfaces matter. Scalable architecture matters. Shipping with precision matters.**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Expertise & Technologies
 
-To learn more about Next.js, take a look at the following resources:
+### 🖥️ Full-Stack Engineering
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Designing and shipping production-ready systems using modern TypeScript architecture.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Languages:** JavaScript, TypeScript, Python, HTML5, CSS3, Solidity
+- **Frontend:** React, Next.js, Tailwind CSS, shadcn/ui, Redux
+- **Backend:** Node.js, Express.js, NestJS, FastAPI, REST APIs, GraphQL
+- **Database & Auth:** PostgreSQL, MySQL, MongoDB, Redis, Prisma, Supabase, Firebase, JWT, OAuth, Stripe
 
-## Deploy on Vercel
+### 🤖 AI Automation & Agent Systems
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Building intelligent systems that automate workflows and embed AI directly into digital products.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Tools:** OpenAI API, Claude, GPT-4, LangChain, LlamaIndex, Vector Databases (Pinecone)
+- **Pipelines:** n8n, Zapier, Make.com, RAG Pipelines
+
+### ⛓️ Web3 & Blockchain Integration
+
+Bridging traditional web systems with decentralized infrastructure.
+
+- **Tech:** Web3.js, Ethers.js, Solidity, The Graph
+- **Ecosystems:** Ethereum, Solana, Polygon, Wallet Auth, Token Gating
+
+### 🏗️ Systems & Product Thinking
+
+Approaching development with scalability, and long-term maintainability in mind.
+
+- **DevOps/Tools:** Docker, AWS, GCP, Vercel, CI/CD (GitHub Actions), Jest
+
+---
+
+## 🚀 Featured Projects
+
+### [Ticky](https://ticky-eta.vercel.app/)
+
+**Multiplayer Tic-Tac-Toe game with real-time updates.**
+Features a responsive interface, smooth animations, and a leaderboard. Built with a focus on performance, accessibility, and real-time connectivity.
+
+- **Tech Stack:** React, Node.js, TypeScript, Tailwind CSS, MongoDB, Socket.IO (Realtime)
+
+### [Wallet Scan](https://walletscan-staging.vercel.app)
+
+**Real-time Proof of Funds PDF Generator & Portfolio Management.**
+A comprehensive cryptocurrency portfolio management app allowing users to track investments across multiple exchanges. Features real-time price updates, customizable alerts, and analytics.
+
+- **Tech Stack:** Next.js, TypeScript, Tailwind CSS, Web3/@Solana, Helius API, Zapper API, Wagmi, Viem
+
+---
+
+## 📫 Let's Connect
+
+Let’s turn your vision into something amazing.
+
+- **Website:** [vicdevman.dev](https://vicdevman.dev)
+- **Timezone:** UTC+1 (Flexible to global teams)
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=vicdevman&color=blueviolet" alt="vicdevman profile views" />
+</div>

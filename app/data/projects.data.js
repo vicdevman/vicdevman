@@ -1,5 +1,39 @@
 export const projects = [
   {
+  id: "whalesight",
+  title: "WhaleSight",
+  image: "/project-image/whalesight.png",
+  description: "Solana wallet tracking and analysis bot with a Telegram Mini App",
+  longDescription:
+    "WhaleSight is a Solana wallet tracking and analytics platform that runs as a Telegram Bot and Telegram Mini App. It allows users to monitor wallet activity in real time, analyze profit and loss, and receive instant alerts for swaps and transactions. The backend is built with Node.js and Express, handling Telegram bot commands, Solana webhooks, and wallet analysis. The frontend Mini App provides a sleek dashboard interface where users can scan wallets, manage tracked addresses, and interact with analytics directly inside Telegram.",
+  techStack: [
+    "Node.js",
+    "Express",
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "PostgreSQL",
+    "Neon Serverless",
+    "Redis",
+    "Solana Web3.js",
+    "Telegram Bot API",
+    "Turborepo"
+  ],
+  link: "https://t.me/WhaleSightBot",
+  githubLink: "https://github.com/vicdevman/whaleSight",
+  demoLink: "https://t.me/WhaleSightBot",
+  category: ["Web App", "Web3", "Telegram Bot", "Blockchain", "Analytics"],
+  featured: true,
+  completionDate: "2025-01",
+  role: "Full Stack Developer",
+  images: [
+    "/image/whalesight-dashboard.jpg",
+    "/image/whalesight-wallet-scan.jpg",
+    "/image/whalesight-telegram-bot.jpg"
+  ],
+  },
+  {
     id: "ticky",
     title: "Ticky",
     image: "/project-image/ticky-game.png",
