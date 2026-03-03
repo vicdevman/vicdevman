@@ -81,7 +81,7 @@ export default function ProjectDetail() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="pt-32 pb-16 px-6 max-w-3xl mx-auto w-full">
+      <div className="pt-32 pb-10 px-6 max-w-3xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -120,17 +120,17 @@ export default function ProjectDetail() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-        className="w-full max-w-3xl mx-auto px-6 mb-16"
+        className="w-full max-w-3xl mx-auto px-6 mb-10"
       >
         <div
           onClick={() => openLightbox(0)}
-          className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-3xl overflow-hidden cursor-zoom-in group shadow-2xl border border-neutral-100"
+          className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden cursor-zoom-in group shadow-xdatel border border-neutral-100"
         >
           <Image
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
             priority
           />
           <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500" />
@@ -196,7 +196,7 @@ export default function ProjectDetail() {
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeUp}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-neutral-50 p-8 rounded-3xl border border-neutral-100 shadow-sm"
+              className="bg-neutral-50 p-4 rounded-3xl border border-neutral-100 shadow-sm"
             >
               <h3 className="text-xl font-[satoshi-bold] mb-8 pb-4 border-b border-neutral-200">
                 Project Info
