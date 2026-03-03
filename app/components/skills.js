@@ -1,156 +1,79 @@
 "use client";
 
-import { FileText } from "lucide-react";
 import React from "react";
 import { motion } from "framer-motion";
-import GlassIcons from "../../components/GlassIcons";
-import { Layers } from "lucide-react";
-import { Bot } from "lucide-react";
-import { Link } from "lucide-react";
-import { Network } from "lucide-react";
-
-const portfolioSections = [
-  {
-    id: "fullstack-engineering",
-    title: "Full-Stack Engineering",
-    items: [{ icon: <Layers color='white' strokeWidth={2} size={22}/>, color: "#2563EB", label: "" }],
-    positioning:
-      "Designing and shipping production-ready full-stack systems using modern TypeScript architecture.",
-    techstack: [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Node.js",
-      "Express.js",
-      "NestJS",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "shadcn/ui",
-      "Redux",
-      "REST APIs",
-      "GraphQL",
-      "WebSockets",
-      "Socket.IO",
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB",
-      "Redis",
-      "Prisma",
-      "Supabase",
-      "Firebase",
-      "JWT",
-      "OAuth",
-      "Role-Based Access Control",
-      "Stripe",
-    ],
-    valueProposition:
-      "Build scalable, maintainable, and secure web applications with clean architecture and production standards.",
-  },
-  {
-    id: "ai-automation-systems",
-    title: "AI Automation & Agent Systems",
-    items: [{ icon: <Bot color='white' strokeWidth={2} size={22}/>, color: "#9333EA", label: "" }],
-    positioning:
-      "Building intelligent systems that automate workflows and embed AI directly into digital products.",
-    techstack: [
-      "OpenAI API",
-      "Claude (Anthropic)",
-      "GPT-4",
-      "LangChain",
-      "AutoGen",
-      "LlamaIndex",
-      "Haystack",
-      "Vector Databases (Pinecone, Weaviate)",
-      "n8n",
-      "Zapier",
-      "Make.com",
-      "FastAPI",
-      "Python",
-      "TensorFlow",
-      "PyTorch",
-      "Whisper",
-      "Apache Airflow",
-      "RAG Pipelines",
-      "Python Async",
-      "LangGraph",
-    ],
-    valueProposition:
-      "Reduce manual processes, increase operational efficiency, and transform products with embedded AI capabilities.",
-  },
-  {
-    id: "web3-blockchain-integration",
-    title: "Web3 & Blockchain Integration",
-    items: [{ icon: <Link color='white' strokeWidth={2} size={22}/>, color: "#14B8A6", label: "" }],
-    positioning:
-      "Integrating blockchain functionality into modern web applications.",
-    techstack: [
-      "Solidity",
-      "Web3.js",
-      "Ethers.js",
-      "The Graph / Subgraphs",
-      "Blockchain Protocols (Ethereum, Polygon, BNB Chain, Solana)",
-      "Wallet Auth (Metamask, WalletConnect)",
-      "Token Gating",
-      "Smart Contract Interaction",
-      "Decentralized Storage",
-    ],
-    valueProposition:
-      "Bridge traditional web systems with decentralized infrastructure to create secure blockchain experiences.",
-  },
-  {
-    id: "systems-product-thinking",
-    title: "Systems & Product Thinking",
-    items: [{ icon: <Network color='white' strokeWidth={2} size={22} />, color: "#F59E0B", label: "" }],
-    positioning:
-      "Approaching development with systems thinking, scalability, and long-term maintainability in mind.",
-    techstack: [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "GCP",
-      "Azure",
-      "CI/CD (GitHub Actions, GitLab CI)",
-      "Terraform",
-      "Vercel",
-      "Netlify",
-      "Postman",
-      "ESLint",
-      "Prettier",
-      "Testing Tools (Jest, Playwright)",
-      "Design Tools (Figma)",
-    ],
-    valueProposition:
-      "Engineer solutions that are not only functional, but designed for growth, resilience, and long-term impact.",
-  },
-];
+import { Layers, Bot, Link as LinkIcon, Network, Command } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Skills() {
   const fadeInUp = {
-    initial: { opacity: 0, y: 50 },
+    initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
   };
 
   const fadeInDown = {
-    initial: { opacity: 0, y: -30 },
+    initial: { opacity: 0, y: -20 },
     animate: { opacity: 1, y: 0 },
   };
+
+  const skills = [
+    {
+      id: "fullstack",
+      title: "Full-Stack Engineering",
+      icon: <Layers size={18} className="text-neutral-700" />,
+      description:
+        "Clean frontend experiences merged with scalable, production-ready backend systems.",
+      techs: "React, Next.js, Node.js, TypeScript, fastAPI",
+    },
+    {
+      id: "ai",
+      title: "AI Automation",
+      icon: <Bot size={18} className="text-neutral-700" />,
+      description:
+        "Intelligent systems embedded directly into products to automate high-friction workflows.",
+      techs: "OpenAI, LangChain, Python, Vector DBs",
+    },
+    {
+      id: "web3",
+      title: "Web3 Integration",
+      icon: <LinkIcon size={18} className="text-neutral-700" />,
+      description:
+        "Decentralized architecture securely bridging traditional web and blockchain functionality.",
+      techs: "Solidity, The Graph, Web3.js, Solana",
+    },
+    {
+      id: "systems",
+      title: "Systems Architecture",
+      icon: <Network size={18} className="text-neutral-700" />,
+      description:
+        "Designing for growth, resilience, and maintainability. Not just code, but reliable systems.",
+      techs: "Docker, AWS, CI/CD, Serverless",
+    },
+  ];
+
   return (
-    <div className=" flex flex-col mt-20">
-      <div className=" max-w-xl mx-auto px-6">
+    <div className="flex flex-col mt-24 mb-10">
+      <div className="max-w-3xl mx-auto px-6 w-full">
         <motion.div
           variants={fadeInDown}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.35, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="mb-10 text-center"
         >
-          <h1 className="text-3xl max-sm:text-2xl text-center font-[satoshi-bold] mb-1 tracking-tight">
+          {/* <div className="flex items-center justify-center gap-2 mb-3">
+            <Command size={16} className="text-neutral-400" />
+            <span className="text-xs uppercase tracking-widest text-neutral-400 font-[satoshi-bold]">
+              Expertise
+            </span>
+          </div> */}
+          <h1 className="text-3xl max-sm:text-2xl font-[satoshi-bold] tracking-tight text-neutral-900">
             How Can I Help?
           </h1>
-          <p className="text-lg max-sm:text-[1rem] text-center text-neutral-500 font-[satoshi-medium] tracking">
-            Let’s turn your vision into something amazing.
+          <p className="text-lg max-sm:text-[1rem] mt-2 text-neutral-500 font-[satoshi-medium] tracking-tight leading-relaxed max-w-xl mx-auto">
+            Turning complex ideas into structured, scalable products without
+            compromising maintainability.
           </p>
         </motion.div>
 
@@ -159,44 +82,39 @@ export default function Skills() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.45, ease: "easeOut", delay: 0.05 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
-          <div className="grid grid-cols-2 w-full gap-2 mt-8">
-          {portfolioSections &&
-            portfolioSections.map((section) => (
-              <div
-                key={section.id}
-                className="w-full rounded-xl relative bg-neutral-100/80 p-4 flex items-start  border border-neutral-200/40 shadow-[inset_0_2px_4px_rgba(255,2550,255),_inset_0_-2px_4px_rgba(255,255,255)]"
-              >
-                {/* <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 left-4"></div>
-            <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 top-3.5 right-2"></div>
-            <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 bottom-3.5 right-2"></div>
-            <div className="min-w-2 min-h-2 absolute bg-linear-30 from-neutral-200 to-neutral-300 border border-neutral-300 rounded-full mr-2 bottom-3.5 left-4"></div> */}
-                <div className="flex flex-col justify-between gap-2">
-                  <div style={{ height: "140px", position: "relative", marginTop: '-34px' }}>
-                    <GlassIcons
-                      items={section.items}
-                       colorful={false}
-                      
-                    />
+          {skills.map((skill) => (
+            <div
+              key={skill.id}
+              className="group flex flex-col justify-between rounded-3xl bg-neutral-100/60 p-6 border border-neutral-200/40 shadow-[inset_0_2px_4px_rgba(255,255,255,0.5),inset_0_-2px_4px_rgba(255,255,255,0.5)] hover:bg-neutral-100 transition-colors duration-300"
+            >
+              <div>
+               <div className="flex justify-between items-start mb-4">
+                  <div className="w-14 h-14 rounded-2xl bg-neutral-100/80 border border-neutral-200/50 flex items-center justify-center group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500 shadow-sm">
+                    {skill.icon}
                   </div>
-                  <h1 className="text-[1rem] max-sm:text-[0.9rem] font-[satoshi-bold] tracking-tight">
-                    {section.title}
-                  </h1>
-                  {/* <p className="text-[1rem] text-neutral-400 font-[satoshi-normal] tracking-tight">
-                    {section.positioning}
-                  </p> */}
-                  {/* <div className="flex flex-wrap gap-2 mt-3">
-                  {section.techstack.map((tech, index) => (
-                    <div key={index} className="text-xs font-[satoshi-medium] p-1.5 px-3 border tracking-tight bg-neutral-200 border-neutral-300/60 text-neutral-500 rounded-xl">
-                        {tech}
-                    </div>
-                  ))}
-                </div> */}
+                  {/* <ArrowUpRight
+                    size={20}
+                    className="text-neutral-300 group-hover:text-neutral-900 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500"
+                  /> */}
                 </div>
-                </div>
-              ))}
-          </div>
+                <h2 className="text-lg font-[satoshi-bold] tracking-tight text-neutral-900 mb-2">
+                  {skill.title}
+                </h2>
+                <p className="text-[0.95rem] text-neutral-500 font-[satoshi-medium] leading-relaxed mb-6">
+                  {skill.description}
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-neutral-200/60">
+                <p className="text-xs font-[satoshi-medium] tracking-wide text-neutral-400">
+                  {skill.techs}
+                </p>
+              </div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </div>

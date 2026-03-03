@@ -68,7 +68,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mt-6 flex flex-col gap-4 max-sm:gap-2 min-full"
+      className="mt-6 flex flex-col gap-4 max-sm:gap-2.5 min-full"
     >
       <AnimatePresence mode="wait">
         {submitStatus.type && (
@@ -86,7 +86,7 @@ export default function ContactForm() {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="flex gap-4 max-sm:gap-2">
+      <div className="flex gap-4 max-sm:gap-2.5">
         <Input
           name="name"
           value={formData.name}
