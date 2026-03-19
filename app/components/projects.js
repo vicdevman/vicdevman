@@ -137,7 +137,7 @@ export default function Projects({show = true}) {
                   {project.title}
                 </h1>
                 <p className="text-[1rem] line-clamp-2 mb-2 leading-tight text-neutral-500/95 font-[satoshi-medium] max-w-sm tracking ml-2 -mt-2">
-                  {project.longDescription}
+                  {project.description}
                 </p>
 
                 <Link href={`/projects/${project.id}`} className="whitespace-nowrap bg-neutral-100 px-5 py-3 text-md cursor-pointer rounded-xl font-[satoshi-medium] flex justify-between w-40 transition hover:scale-x-108 active:scale-x-108 hover:bg-neutral-200/80 origin-left items-center">

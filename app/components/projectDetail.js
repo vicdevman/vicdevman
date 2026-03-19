@@ -153,11 +153,32 @@ export default function ProjectDetail() {
                 Overview
               </h2>
               <div className="prose prose-lg text-neutral-600 font-[satoshi-normal] leading-relaxed">
-                {project.longDescription.split("\n").map((p, i) => (
-                  <p key={i} className="mb-4">
-                    {p}
-                  </p>
-                ))}
+                {project.longDescription.split("\n").map((p, i) => {
+                  if (!p.trim()) return <div key={i} className="h-4" />;
+
+                  const isHeader = [
+                    "Problem:",
+                    "Solution:",
+                    "Experience:",
+                  ].some((h) => p.startsWith(h));
+
+                  if (isHeader) {
+                    return (
+                      <h3
+                        key={i}
+                        className="text-xl font-[satoshi-bold] text-neutral-900 mt-8 mb-4 uppercase tracking-wider"
+                      >
+                        {p}
+                      </h3>
+                    );
+                  }
+
+                  return (
+                    <p key={i} className="mb-4">
+                      {p}
+                    </p>
+                  );
+                })}
               </div>
             </motion.div>
 
