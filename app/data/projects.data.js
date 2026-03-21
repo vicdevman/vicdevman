@@ -60,7 +60,7 @@ Players enter a sleek, glassmorphic arena that supports both global matchmaking 
   {
     id: "whalesight",
     title: "WhaleSight",
-    image: "/project-image/whalesight-c.png",
+    image: "/image/whalesight-landing.png",
     description:
       "A high-performance Solana whale tracking platform with real-time Telegram alerts and deep wallet analytics.",
     longDescription: `Problem:
@@ -84,8 +84,9 @@ Users enjoy a sleek, integrated dashboard within Telegram, allowing them to scan
       "Solana Web3.js",
       "Telegram Bot API",
       "Turborepo",
+      "Monorepo"
     ],
-    link: "https://t.me/WhaleSightBot",
+    link: "https://whale-sight-web.vercel.app/",
     githubLink: "https://github.com/vicdevman/whaleSight",
     demoLink: "https://t.me/WhaleSightBot",
     category: ["Web App", "Web3", "Telegram Bot", "Blockchain", "Analytics"],
@@ -93,6 +94,7 @@ Users enjoy a sleek, integrated dashboard within Telegram, allowing them to scan
     completionDate: "2025-01",
     role: "Full Stack Developer",
     images: [
+      "/project-image/whalesight-c.png",
       "/image/whalesight-wallet-scan.png",
       "/image/whalesight-telegram-bot.png",
       "/image/whalesight-alert.png",

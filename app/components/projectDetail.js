@@ -305,7 +305,7 @@ export default function ProjectDetail() {
                   src={img}
                   alt={`${project.title} - Image ${idx + 1}`}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
               </motion.div>
             ))}

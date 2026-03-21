@@ -130,7 +130,7 @@ export default function Projects({show = true}) {
                   alt={project.title}
                   width={1000}
                   height={1000}
-                  className="object-cover min-w-full w-200 h-56 rounded-2xl border border-neutral-200/90 shadow-[0_8px_20px_0_rgba(0,0,0, 0.8)]"
+                  className="object-cover object-top min-w-full w-200 h-56 rounded-2xl border border-neutral-200/90 shadow-[0_8px_20px_0_rgba(0,0,0, 0.8)]"
                 />
 
                 <h1 className="text-[1.35rem] font-[satoshi-bold] mb-2 tracking-tighter ml-2 ">
