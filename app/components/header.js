@@ -1,25 +1,43 @@
 "use client";
 
-import { ChevronRight } from "lucide-react";
-import { House, Linkedin, Github } from "lucide-react";
+import {
+  ChevronRight
+} from "lucide-react";
+import {
+  House,
+  Linkedin,
+  Github
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import {
+  motion
+} from "framer-motion";
 
 export default function Header() {
-  const header = [
-    { icon: "Twitter", label: "Twitter(X)", link: "https://x.com/vicdevman" },
-    { icon: "Github", label: "Github", link: "https://github.com/vicdevman" },
-    {
-      icon: "LinkedIn",
-      label: "LinkedIn",
-      link: "https://www.linkedin.com/in/vicdevman",
-    },
-  ];
+  const header = [{
+    icon: "Twitter",
+    label: "Twitter(X)",
+    link: "https://x.com/vicdevman"
+  }, {
+    icon: "Github",
+    label: "Github",
+    link: "https://github.com/vicdevman"
+  }, {
+    icon: "LinkedIn",
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/vicdevman",
+  }, ];
 
   const fadeInDown = {
-    initial: { opacity: 0, y: -80 },
-    animate: { opacity: 1, y: 0 },
+    initial: {
+      opacity: 0,
+      y: -80
+    },
+    animate: {
+      opacity: 1,
+      y: 0
+    },
   };
 
   return (
@@ -140,9 +158,14 @@ export default function Header() {
 
       <div className="h-6 w-[1.5px] bg-neutral-400/20 mx-2"></div>
 
-      <button className="bg-[#191919] hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] shadow text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition">
+      <Link
+        href="/vicdevman%20cv.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#191919] hover:shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] shadow text-white px-6 py-3 text-md cursor-pointer rounded-xl font-[satoshi-bold] hover:bg-neutral-800 transition"
+      >
         Resume
-      </button>
+      </Link>
     </motion.div>
   );
 }
