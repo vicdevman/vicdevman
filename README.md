@@ -59,7 +59,7 @@ Approaching development with scalability, and long-term maintainability in mind.
 
 ## 🚀 Featured Projects
 
-### [Qleva](https://app.qleva.cloud/)
+### [Qleva](https://www.qleva.cloud/)
 
 **AI-powered conversational crypto automation assistant.**
 Allows users to automate crypto actions (DCA, profit-taking, bridging, recurring payments) using natural language, translating user intent into structured execution plans executed trustlessly via smart wallet delegation and secure permissions.
