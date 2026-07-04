@@ -31,23 +31,23 @@ function ImageCard({ src, alt = "alt thing", href = "#" }) {
 const techLogos = [
   {
     node: <ImageCard src="/image/landing-page.jpg" alt="React" />,
-    title: "React",
-    href: "https://react.dev",
+    title: "Qleva",
+    href: "",
   },
   {
     node: <ImageCard src="/image/podcast-dashboard.jpg" alt="Next.js" />,
-    title: "Next.js",
-    href: "https://nextjs.org",
+    title: "Shipstory",
+    href: "",
   },
   {
     node: <ImageCard src="/image/social-media-app.jpg" alt="TypeScript" />,
-    title: "TypeScript",
-    href: "https://www.typescriptlang.org",
+    title: "Whalesight",
+    href: "",
   },
   {
     node: <ImageCard src="/image/tour-planner.jpg" alt="Tailwind CSS" />,
-    title: "Tailwind CSS",
-    href: "https://tailwindcss.com",
+    title: "Ticky",
+    href: "",
   },
 ];
 

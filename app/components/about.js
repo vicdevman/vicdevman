@@ -20,7 +20,7 @@ export default function About() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className=" flex flex-col mt-100"
     >
-      <div className=" max-w-3xl mx-auto px-6">
+      <div className=" max-w-4xl mx-auto px-6">
         <h1 className="text-2xl font-[satoshi-bold] mb-2 tracking-tight">
           About
         </h1>

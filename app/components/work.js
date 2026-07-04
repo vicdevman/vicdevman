@@ -6,18 +6,25 @@ import { ChevronDown } from "lucide-react";
 
 const experiences = [
   {
-    title: "Full Stack Developer",
-    company: "Creative Solutions Ltd.",
+    title: "Full Stack Engnr.",
+    company: "Guru Innovation hub",
     duration: "2024 - Present",
     description:
       "Leading the development of a customer relationship management (CRM) system using Next.js and TypeScript. Collaborating with cross-functional teams to design and implement scalable solutions, improving user engagement by 30%.",
   },
+ 
   {
     title: "Frontend Engr. Intern",
     company: "Guru Innovation hub",
     duration: "2023 - August 2023",
     description:
       "Contributed to the development of a real-time data analytics dashboard using React and Node.js. Implemented new features and optimized existing code, resulting in a 20% improvement in performance.",
+  }, {
+    title: "Full-Stack AI Engineer",
+    company: "Freelance",
+    duration: "2022 - Present",
+    description:
+      "Developing production-ready AI automation tools, autonomous multi-agent networks, Web3 wallet integrations, real-time transaction scanners, and interactive Telegram/Discord bots for global clients.",
   },
 ];
 

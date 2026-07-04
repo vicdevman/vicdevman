@@ -59,12 +59,19 @@ Approaching development with scalability, and long-term maintainability in mind.
 
 ## 🚀 Featured Projects
 
-### [Ticky](https://ticky-eta.vercel.app/)
+### [Qleva](https://app.qleva.cloud/)
 
-**Multiplayer Tic-Tac-Toe game with real-time updates.**
-Features a responsive interface, smooth animations, and a leaderboard. Built with a focus on performance, accessibility, and real-time connectivity.
+**AI-powered conversational crypto automation assistant.**
+Allows users to automate crypto actions (DCA, profit-taking, bridging, recurring payments) using natural language, translating user intent into structured execution plans executed trustlessly via smart wallet delegation and secure permissions.
 
-- **Tech Stack:** React, Node.js, TypeScript, Tailwind CSS, MongoDB, Socket.IO (Realtime)
+- **Tech Stack:** Next.js, TypeScript, Tailwind CSS, Node.js, Express, LangGraph, Privy, MetaMask Delegation Toolkit, MetaMask Smart Wallet, Base (L2)
+
+### [ShipStory](https://shipstory.vercel.app/)
+
+**Autonomous, adversarial multi-agent growth engine.**
+Translates raw GitHub commits into high-fidelity changelogs, newsletters, social campaigns, and competitive roadmap updates using a network of collaborative, Python-based autonomous agents on the Band.ai platform.
+
+- **Tech Stack:** Next.js, TypeScript, Python, WebSockets, Band SDK, MongoDB, AIML API (Flux 2 Pro), Cloudinary, Tavily API
 
 ### [Wallet Scan](https://walletscan-staging.vercel.app)
 
