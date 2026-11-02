@@ -31,7 +31,7 @@ export default function Contact() {
             I’m always interested in exploring new opportunities, collaborating,
             or exchanging ideas with like-minded individuals. Feel free to 
             {" "}<a
-              href="mailto:vicdevmanx@gmail.com"
+              href="mailto:vicdevman@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="underline hover:text-neutral-700 text-neutral-600 font-[satoshi-medium] cursor-pointer"
